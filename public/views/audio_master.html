@@ -1,0 +1,31 @@
+<br/>
+<div style="margin-left: 120px; ">
+<md-button class="btn1 event_btn" href="#/audio/add">Add New Audio </md-button>
+    </div>
+    <br/>
+<br/>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Audio</td>
+                <td>Edit / Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="audio in audios">
+                <td>{{audio.name}}</td>
+                <td>
+                    
+                        Play:<a href="/audio/song/{{audio._id}}?id={{rnd()}}">{{audio.name}}{{audio.ext}}</a>
+                   
+                </td>
+                <td>
+                    <a href="#/audio/edit/{{audio._id}}">Edit</a>
+                    <a href="#/audio/delete/{{audio._id}}" onclick="return confirm('Are you sure')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

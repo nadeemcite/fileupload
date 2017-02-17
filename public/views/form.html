@@ -1,0 +1,58 @@
+<form name="RadioForm" ng-submit="formSubmit()" style="2px solid grey;" novalidate>
+
+    <div style="padding: 20px; margin-top: 10px; margin-left: 150px;">
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Event Name</label>
+                <input name="Ename" ng-model="event.name" ng-required="true">
+                <span class="small_text" ng-show="!RadioForm.Ename.$valid && RadioForm.Ename.$touched">Please Enter Event Name</span>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Event Desc</label>
+                <textarea name="Edesc" ng-model="event.description" ng-required="true"></textarea>
+                <span class="small_text" ng-show="!RadioForm.Edesc.$valid && RadioForm.Edesc.$touched">Please Enter Event Desc</span>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Location</label>
+                <textarea name="Eloc" ng-model="event.location" ng-required="true"></textarea>
+                <span class="small_text" ng-show="!RadioForm.Eloc.$valid && RadioForm.Eloc.$touched">Please Enter Event Location</span>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Event Date</label>
+                <md-datepicker ng-model="event.ondate" md-placeholder="Enter date"></md-datepicker>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label> Event Time</label>
+                <input md-datetime-picker date="false" time="true" type="text" id="time" short-time="true" placeholder="Time" min-date="minDate" format="hh:mm a" ng-model="event.ondateTime">
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Event Pre-Notification Date:</label>
+                <md-datepicker ng-model="event.notificationDate" md-placeholder="Enter date" ng-focus="setDate()"></md-datepicker>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <label>Event Pre-Notification time</label>
+                <input mdc-datetime-picker date="false" time="true" type="text" id="time" short-time="true" placeholder="Time" min-date="minDate" format="hh:mm a" ng-model="event.notificationTime" ng-focus="setDate()">
+            </md-input-container>
+        </div>
+        <div layout="row" layout-xs="column">
+            <md-input-container flex="80">
+                <md-checkbox ng-click="notificationNow(event)" ng-model="event.notify" aria-label="Send Notification Now"> Send Notification Now </md-checkbox>
+            </md-input-container>
+        </div>
+        <md-input-container flex="30">
+            <md-button type="submit" class="md-primary notif" ng-disabled="MyForm.$invalid">Send Notification</md-button>
+        </md-input-container>
+    </div>
+</form>

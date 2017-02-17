@@ -1,0 +1,66 @@
+body{
+     overflow-x: hidden;
+
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.md-button {
+
+    color: black;
+    padding: 0 6px 0 6px;
+    margin: 6px 8px 6px 8px;
+    min-width: 88px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+.btn_special {
+    margin-left: 80px;
+}
+
+#menu_div {
+    background-color: grey;
+}
+
+.event_btn {
+    background-color: cornflowerblue; !important
+    text-align: center;
+    margin-left: 500px;
+
+}
+.notif{
+    background-color:cornflowerblue;
+    margin-left: 385px;
+
+}
+
+.mymodal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1000;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}

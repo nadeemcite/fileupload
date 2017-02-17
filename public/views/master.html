@@ -1,0 +1,32 @@
+<br/>
+<div style="margin-left: 120px; ">
+<md-button class="btn1 event_btn" href="#/gallery/addnew">Add New Image </md-button>
+    </div>
+    <br/>
+<br/>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Image</td>
+                <td>Edit / Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="gallery in galleries">
+                <td>{{gallery.name}}</td>
+                <td>
+                    <img ng-src="api/gallery/image/{{gallery._id}}?id={{rnd()}}" style="height:100px; width:100px;">
+                </td>
+                <td>
+                    <img ng-src="api/gallery/image/{{gallery._id}}?id={{rnd()}}" style="height:100px; width:100px;">
+                </td>
+                <td>
+                    <a href="#/galleryedit/{{gallery._id}}">Edit</a>
+                    <a href="#/gallery/delete/{{gallery._id}}" onclick="return confirm('Are you sure')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+<br/>
+<div style="margin-left: 120px; ">
+<md-button class="btn1 event_btn" href="#/form"> New Events </md-button>
+    </div>
+<br/>
+<br/>
+<div class="form_set" style="overflow-x:auto; padding: 20px;">
+<table  border="1px" class="table table-bordered">
+    <thead>
+        <tr class="info">
+            <th style="text-align: center;">Event</th>
+            <th style="text-align: center;">On Date</th>
+            <th style="text-align: center;">Location</th>
+            <th style="text-align: center;">Edit</th>
+            <th style="text-align: center;">Delete</th>
+            <th> Send </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat='event in events'>
+            <td style="text-align: center;">{{event.name}}</td>
+            <td style="text-align: center;"> {{event.ondate | date : 'dd/MM/yyyy'}} </td>
+            <td style="text-align: center;">{{event.location}}</td>
+            <td style="text-align: center;"> <a href="#/editevent/{{event._id}}" class="btn btn-primary" role="button">Edit</a> </td>
+            <td style="text-align: center;"> <a href="#/event/{{event._id}}" onclick="return confirm('Are you sure')" class="btn btn-danger" role="button">Delete</a> </td>
+            <td>
+                <center> <button style="text-align: center;" type="button" ng-click="notification(event)">Send</button></center>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+</div>
+    <br/><br/>
+   <br/><br/>

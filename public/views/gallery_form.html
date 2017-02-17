@@ -1,0 +1,9 @@
+<br/>
+
+<form name="imageForm" ng-submit="submitForm()">
+    Name <input type="text" ng-model="name" /><br />
+    <img ng-src="{{imageLink}}" ng-show="showImage"/><br />
+    Image 1:  <input type = "file" file-model="myFile"/><br />
+    Image 2:  <input type = "file" file-model="myFile"/><br />
+    <input type="submit" value="Upload Image" />
+</form>

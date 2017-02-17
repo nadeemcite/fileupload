@@ -1,0 +1,31 @@
+<br/>
+<div style="margin-left: 120px; ">
+<md-button class="btn1 event_btn" href="#/video/add">Add New Video </md-button>
+    </div>
+    <br/>
+<br/>
+<div>
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Video</td>
+                <td>Edit / Delete</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="video in videos">
+                <td>{{video.name}}</td>
+                <td>
+                    
+                        <a href="/video/song/{{video._id}}?id={{rnd()}}">{{video.name}}{{video.ext}}</a>
+                   
+                </td>
+                <td>
+                    <a href="#/video/edit/{{video._id}}">Edit</a>
+                    <a href="#/video/delete/{{video._id}}" onclick="return confirm('Are you sure')">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
